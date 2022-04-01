@@ -1,0 +1,33 @@
+<html>
+    <head>
+       <title>Home</title>
+    </head>
+    <body>
+<body>
+    <a id="top">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+     </a>
+    <h1>Welcome {{ name }} </h1>
+    <a href="www.google.com"> not google </a>
+     <ul>
+        {% for city in city_names %}
+        <li>{{ city }}</li>
+        {% endfor %}
+    </ul>
+     <label> City Name </label>
+    <form action="" method="POST">
+     <input input id ='new_city' type = 'city_name' name = 'pass' maxlength='32'>
+    <p> <input type = "submit" value = "Submit"></p>
+    </form>
+            
+
+</body>
+</html>
